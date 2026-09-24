@@ -34,6 +34,7 @@ Menggunakan AI di beberapa bagian, seperti memasukkan gambar dan membuat label s
 | --color-focus | #1C0103 | garis fokus papan ketik |
 
 | Token | Nilai | Untuk apa |
+|---|---|---|
 | --space-1 | 0.25rem | jarak paling rapat di dalam komponen |
 | --space-2 | 0.5rem | jarak antar label dan isian |
 | --space-3 | 0.75rem | jarak di dalam kantu |
