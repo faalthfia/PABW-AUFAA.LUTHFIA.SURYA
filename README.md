@@ -55,3 +55,8 @@ Menggunakan AI di beberapa bagian, seperti memasukkan gambar dan membuat label s
 - Di A.1 bagian tabel Cara Python
 - Mencari tahu maksud dari code di A.3
 - Penjelsaan konsep map, filter, dan find (perbedaan dan kapan dipakai)
+
+## Pertemuan 9
+## Catatan Penggunaan AI
+- Memahami kapan menggunakan querySelector dan querySelectorAll
+- Cara menambahkan filter
