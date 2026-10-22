@@ -1,0 +1,132 @@
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);          /* jarak label ke isian, seragam */
+}
+ 
+label {
+  font-size: var(--text-sm);
+  font-weight: 400;
+}
+ 
+input, select, textarea {
+  font: inherit;                /* kolom isian ikut ukuran huruf halaman */
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+ 
+button {
+  font: inherit;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  cursor: pointer;
+}
+
+/* :focus-visible hanya muncul saat pengguna memakai papan ketik */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+ 
+/* JANGAN seperti ini — pengguna papan ketik kehilangan jejak */
+/* *:focus { outline: none; } */
+
+/* SALAH — form tampak merah padahal pengguna belum menyentuhnya */
+input:invalid { border-color: var(--color-danger); }
+ 
+/* BENAR — hanya setelah pengguna mengetik sesuatu yang tidak sah */
+input:user-invalid {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}
+ 
+/* Pesan galat: sembunyikan selama belum tidak-sah, tampilkan saat perlu */
+.pesan-galat       { display: none; color: var(--color-danger); font-size: var(--text-sm); }
+.form-kolom:has(input:user-invalid) .pesan-galat { display: block; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;      
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;                
+}
+
+caption {
+  text-align: left;
+  font-size: var(--text-sm);
+  color: var(--color-fg);
+  padding-block: var(--space-2);
+}
+
+th, td {
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+thead th {
+  background: var(--color-bg);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+tbody tr:last-child td { border-bottom: none; } 
+tbody tr:hover { background: var(--color-bg); }  
+
+figure {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--card-pad);
+}
+
+figure img {
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+}
+
+figcaption {
+  font-size: var(--text-sm);
+  color: var(--color-fg);
+}
+
+form p {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+form p:last-child { margin-bottom: 0; }
+
+blockquote {
+  background: var(--color-surface);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--card-pad);
+  box-shadow: var(--shadow-1);
+  margin-top: var(--space-4);
+}
+
+blockquote p {
+  font-style: italic;
+  font-size: var(--text-xl);
+  line-height: 1.4;
+  margin-bottom: var(--space-2);
+}
+
+blockquote footer {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-fg);
+}

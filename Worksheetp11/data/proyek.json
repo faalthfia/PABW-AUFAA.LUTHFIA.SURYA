@@ -1,0 +1,16 @@
+[     
+  { "id": 1, "judul": "Goodnight n go", "penyanyi": "Ariana Grande", "tahun": 2018, "album": "Sweetener", "genre": "R&B", "favorit": true },
+  { "id": 2, "judul": "The Party & The After Party", "penyanyi": "The Weeknd", "tahun": 2011, "album": "House of Balloons", "genre": "R&B", "favorit": true },
+  { "id": 3, "judul": "Normal Girl", "penyanyi": "SZA", "tahun": 2017, "album": "Ctrl", "genre": "R&B", "favorit": false },
+  { "id": 4, "judul": "Love Galore", "penyanyi": "SZA", "tahun": 2017, "album": "Ctrl", "genre": "R&B", "favorit": true },
+  { "id": 5, "judul": "Ride", "penyanyi": "Lana Del Rey", "tahun": 2012, "album": "Born to Die: The Paradise Edition", "genre": "Indie", "favorit": true },
+  { "id": 6, "judul": "Carmen", "penyanyi": "Lana Del Rey", "tahun": 2012, "album": "Born to Die: The Paradise Edition", "genre": "Indie", "favorit": false },
+  { "id": 7, "judul": "Buyer's Remorse", "penyanyi": "Daniel Caesar, Omar Apollo", "tahun": 2023, "album": "Never Enough", "genre": "R&B", "favorit": true },
+  { "id": 8, "judul": "Best Part", "penyanyi": "Daniel Caesar, H.E.R.", "tahun": 2017, "album": "Best Part", "genre": "R&B", "favorit": true },
+  { "id": 9, "judul": "Vince Van Gogh", "penyanyi": "Daniel Caesar", "tahun": 2023, "album": "Never Enough", "genre": "R&B", "favorit": false },
+  { "id": 10, "judul": "Starting Over Again", "penyanyi": "Natalie Code", "tahun": 1989, "album": "Good to be Back", "genre": "Jazz", "favorit": true },
+  { "id": 11, "judul": "Low", "penyanyi": "Flo Rida", "tahun": 2008, "album": "Mail on Sunday", "genre": "Hip Hop", "favorit": false }
+]
+
+
+

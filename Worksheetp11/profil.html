@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY FAVORITE SONGS</title>
+
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="responsif.css">
+  <link rel="stylesheet" href="tema.css">
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="header-baris">
+    <h1>Musik yang Saya Suka</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#daftar-lagu">Daftar Lagu</a></li>
+        <li><a href="#tambah-lagu">Tambah Lagu</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="content">
+
+  <aside class="sisi">
+    <nav aria-label="Navigasi samping">
+      <ul>
+        <li><a href="#daftar-lagu">Daftar Lagu</a></li>
+        <li><a href="#galeri">Galeri Album</a></li>
+        <li><a href="#tambah-lagu">Tambah Lagu</a></li>
+      </ul>
+    </nav>
+    <figure>
+      <img src="Musik.jpeg" 
+           alt="Piringan hitam dan headphone di atas meja kayu"
+           loading="lazy" 
+           decoding="async">
+      <figcaption>Koleksi musik yang saya miliki</figcaption>
+    </figure>
+  </aside>
+
+  <div class="utama">
+
+<section id="daftar-lagu">
+  <h2>Daftar Lagu Favorit</h2>
+
+  <div id="filter" class="filter" aria-label="Filter genre">
+  <button type="button" id="atur-ulang">Atur ulang</button>
+<button type="button" data-kategori="semua" class="filter aktif">Semua</button>
+<button type="button" data-kategori="Pop" class="filter">Pop</button>
+<button type="button" data-kategori="Rock" class="filter">Rock</button>
+<button type="button" data-kategori="R&B" class="filter">R&B</button>
+<button type="button" data-kategori="Hip Hop" class="filter">Hip Hop</button>
+<button type="button" data-kategori="Jazz" class="filter">Jazz</button>
+<button type="button" data-kategori="Klasik" class="filter">Klasik</button>
+<button type="button" data-kategori="Indie" class="filter">Indie</button>
+<button type="button" data-kategori="Folk" class="filter">Folk</button>
+<button type="button" data-kategori="Lainnya" class="filter">Lainnya</button>
+  </div>
+
+  <ul id="daftar"></ul>
+  <p id="kosong" hidden>Tidak ada lagu untuk kategori ini.</p>
+  <p id="muat" hidden>Memuat lagu...</p>
+  <p id="gagal" class="galat" role="alert" hidden></p>
+</section>
+
+    <section id="galeri">
+      <h2>Galeri Album</h2>
+      <div class="grid-galeri">
+
+        <article class="kartu">
+          <h3 class="kartu__judul">Goodnight n go</h3>
+          <p class="kartu__isi">Ariana Grande · 2018</p>
+          <div class="kartu__kaki"><span>Sweetener</span><span>R&amp;B</span></div>
+        </article>
+
+        <article class="kartu">
+          <h3 class="kartu__judul">The Party &amp; The After Party</h3>
+          <p class="kartu__isi">The Weeknd · 2011</p>
+          <div class="kartu__kaki"><span>House of Balloons</span><span>R&amp;B</span></div>
+        </article>
+
+        <article class="kartu">
+          <h3 class="kartu__judul">Normal Girl</h3>
+          <p class="kartu__isi">SZA · 2017</p>
+          <div class="kartu__kaki"><span>Ctrl</span><span>R&amp;B</span></div>
+        </article>
+
+        <article class="kartu">
+          <h3 class="kartu__judul">Ride</h3>
+          <p class="kartu__isi">Lana Del Rey · 2012</p>
+          <div class="kartu__kaki"><span>Born to Die</span><span>Indie Pop</span></div>
+        </article>
+
+      </div>
+    </section>
+
+<section id="tambah-lagu">
+  <h2>Tambah Lagu Favorit</h2>
+
+  <form id="form-lagu" action="/simpan" method="post" novalidate>
+    <p>
+      <label for="judul">Judul Lagu:</label>
+      <input type="text" id="judul" name="judul" required>
+      <span class="galat" data-untuk="judul"></span>
+    </p>
+    <p>
+      <label for="penyanyi">Penyanyi/Band:</label>
+      <input type="text" id="penyanyi" name="penyanyi" required>
+      <span class="galat" data-untuk="penyanyi"></span>
+    </p>
+    <p>
+      <label for="tahun">Tahun Rilis:</label>
+      <input type="number" id="tahun" name="tahun" min="1900" max="2026" required>
+      <span class="galat" data-untuk="tahun"></span>
+    </p>
+    <p>
+      <label for="album">Album:</label>
+      <input type="text" id="album" name="album">
+      <span class="galat" data-untuk="album"></span>
+    </p>
+    <p>
+      <label for="genre">Genre:</label>
+      <select id="genre" name="genre" required>
+        <option value="">--Pilih Genre--</option>
+        <option value="Pop">Pop</option>
+        <option value="Rock">Rock</option>
+        <option value="R&B">R&B</option>
+        <option value="Hip Hop">Hip Hop</option>
+        <option value="Jazz">Jazz</option>
+        <option value="Klasik">Klasik</option>
+        <option value="Indie">Indie</option>
+        <option value="folk">Folk</option>
+        <option value="lainnya">Lainnya</option>
+      </select>
+      <span class="galat" data-untuk="genre"></span>
+    </p>
+    <button type="submit">Tambah Lagu</button>
+  </form>
+</section>
+
+  </div>
+
+</main>
+
+<footer>
+  <p>AUFAA LUTHFIA SURYA · 25523197 · 2026</p>
+</footer>
+
+</div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

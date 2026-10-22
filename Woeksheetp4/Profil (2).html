@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+  
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyY FAVORITE SONGS</title>
+ 
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+</head>
+<body>
+
+
+<header>
+<div class="header-baris">
+  <h1>Musik yang Saya Suka</h1>
+  <nav aria-label="Navigasi utama">
+    <ul>
+      <li><a href="#daftar-lagu">Daftar Lagu</a></li>
+      <li><a href="#tambah-lagu">Tambah Lagu</a></li>
+      <li><a href="#tentang-saya">Tentang Saya</a></li>
+    </ul>
+  </nav>
+<label class="tombol-tema">
+  <input type="checkbox" id="tema-terang" class="pengalih-tema">
+  ☀️
+</label>
+</div>
+</header>
+
+
+<main>
+     <section id="daftar-lagu">
+          <h2>Daftar Lagu Favorit </h2>
+
+
+<table>
+     <caption>Daftar Lagu Favorit Saya</caption>
+     <thead>
+          <tr>
+               <th scope="col">No.</th>
+               <th scope="col">Judul Lagu</th>
+               <th scope="col">Penyanyi/Band</th>
+               <th scope="col">Tahun Rilis</th>
+               <th scope="col">Album</th>
+               <th scope="col">Genre</th>
+          </tr>
+     </thead>
+     <tbody>
+          <tr>
+               <td>1</td>
+               <td>Goodnight n go</td>
+               <td>Ariana Grande</td>
+               <td>2018</td>
+               <td>Sweetener</td>
+               <td>R&B</td>
+          </tr>
+          <tr>
+               <td>2</td>
+               <td>The Party & The After Party</td>
+               <td>The Weeknd</td>
+               <td>2011</td>
+               <td>House of Balloons</td>
+               <td>R&B</td>
+          </tr>
+          <tr>
+               <td>3</td>
+               <td>Normal Girl</td>
+               <td>SZA</td>
+               <td>2017</td>
+               <td>Ctrl</td>
+               <td>R&B</td>
+          </tr>
+          <tr>
+               <td>4</td>
+               <td>Love Galore</td>
+               <td>SZA</td>
+               <td>2017</td>
+               <td>Ctrl</td>
+               <td>R&B</td>
+          </tr>
+          <tr>
+               <td>5</td>
+               <td>Ride</td>
+               <td>Lana Del Rey</td>
+               <td>2012</td>
+               <td>Born to Die: The Paradise Edition</td>
+               <td>Indie Pop</td>
+          </tr>
+          <tr>
+               <td>6</td>
+               <td>Carmen</td>
+               <td>Lana Del Rey</td>
+               <td>2012</td>
+               <td>Born to Die: The Paradise Edition</td>
+               <td>Indie Pop</td>
+          </tr>
+          <tr>
+               <td>7</td>
+               <td>Buyer's Remorse</td>
+               <td>Daniel Caesar, Omar Apollo</td>
+               <td>2023</td>
+               <td>Never enough</td>
+               <td>R&B</td>
+          </tr>
+          <tr>
+               <td>8</td>
+               <td>Get You</td>
+               <td>Daniel Caesar, Kali Uchis</td>
+               <td>2016</td>
+               <td>Freudian</td>
+               <td>R&B</td>
+          </tr>
+          <tr>
+               <td>9</td>
+               <td>Best Part</td>
+               <td>Daniel Caesar, H.E.R.</td>
+               <td>2017</td>
+               <td>Best Part</td>
+               <td>R&B</td>
+          </tr>
+          <tr>
+               <td>10</td>
+               <td>Vince Van Gogh</td>
+               <td>Daniel Caesar</td>
+               <td>2023</td>
+               <td>Never Enough</td>
+               <td>R&B</td>
+          </tr>
+     </tbody>
+</table>
+
+  <div class="dua-kolom">
+    <figure>
+      <img src="Musik.jpeg"
+           alt="Piringan hitam dan headphone di atas meja kayu"
+           loading="lazy">
+      <figcaption>Koleksi musik yang saya miliki</figcaption>
+    </figure>
+
+
+      <blockquote>
+        <p>"I'll be there for you, even when you're not there for me."</p>
+        <footer>— SZA, <cite>Normal Girl</cite></footer>
+      </blockquote>
+  </div>
+</section>
+
+
+<section id="tambah-lagu">
+     <h2>Tambah Lagu Favorit</h2>
+     
+     <form action="/simpan" method="post">
+          <p>
+          <label for="judul">Judul Lagu:</label>
+          <input type="text" id="judul" name="judul" required>
+          </p>
+
+          <p>
+          <label for="penyanyi">Penyanyi/Band:</label>
+          <input type="text" id="penyanyi" name="penyanyi" required>
+          </p>
+
+          <p>
+          <label for="tahun">Tahun Rilis:</label>
+          <input type="number" id="tahun" name="tahun" min="1900" max="2026" required>
+          </p>
+
+          <p>
+          <label for="album">Album:</label>
+          <input type="text" id="album" name="album">
+          </p>
+
+          <p>
+          <label for="genre">Genre:</label>
+          <select id="genre" name="genre" required>
+               <option value="">--Pilih Genre--</option>
+               <option value="Pop">Pop</option>
+               <option value="Rock">Rock</option>
+               <option value="R&B">R&B</option>
+               <option value="Hip Hop">Hip Hop</option>
+               <option value="Jazz">Jazz</option>
+               <option value="Klasik">Klasik</option>
+               <option value="Indie">Indie</option>
+               <option value="folk">Folk</option>
+               <option value="lainnya">Lainnya</option>
+          </select>
+          </p>
+
+          <button type="submit">Tambah Lagu</button>
+     </form>
+</section>
+</main>
+
+
+<footer>
+     <p>AUFAA LUTHFIA SURYA · 25523197 · 2026</p>
+</footer>
+
+</body>
+</html>
