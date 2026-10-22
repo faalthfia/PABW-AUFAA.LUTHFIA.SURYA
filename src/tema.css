@@ -1,0 +1,16 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:#E7EBCB;
+    --color-fg:#003670;
+    --color-surface:#FFFFFF;
+    --color-border:#D1D5DB;
+    --color-primary:#381B5B;
+    --color-danger:#BF020F;
+    --color-focus:#14082A;
+    --shadow-1: 0 1px 3px rgba(0, 0, 0, .45);
+  }
+}
